@@ -1,0 +1,12 @@
+master:
+  ## The number of pods in the master deployment
+  replicaCount: 1
+server:
+  ## The number of pods in the server deployment
+  replicaCount: 2
+
+image:
+  pullPolicy: IfNotPresent
+  repository: "pedrocesarti/jmeter-docker"
+  tag: 3.3
+

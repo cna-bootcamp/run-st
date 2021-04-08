@@ -1,0 +1,62 @@
+#!/bin/bash
+
+if ([ $# -lt 1 ]) || ([ $# -eq 1 ] && [ "$1" == "-h" -o "$1" == "--help" ]); then
+  echo "run-st <testcase id> [<max jvm memory>]"
+  echo " testcase id: testcase목적을 나타내는 ID "
+  echo " max jvm momory: ex) 2048m, 2g. default 512m"
+  echo " ex) ./run-st sample"
+  echo " ex) ./run-st sample 5g"
+  read -p "# Testcase ID: " TESTCASE_ID
+  read -p "# MAX JVM Mem(Default: 512m): " MAX_JVM_MEM
+  if [ "${MAX_JVM_MEM}" == ""]; then
+    MAX_JVM_MEM=512m
+  fi
+else
+  TESTCASE_ID=$1
+  if [ $# -eq 2 ]; then
+    MAX_JVM_MEM=$2
+  else
+    MAX_JVM_MEM=512m
+  fi
+fi
+
+# === Get slave pod IPs === 
+IPs=`kubectl get po -o wide | grep jmeter-server | awk '{print $6}'`
+
+for ip in ${IPs}
+do
+  slave_addr="${slave_addr},${ip}:1099"
+done
+# =========================
+
+# === set below parameters ========
+MASTER_POD=`kubectl get po | grep jmeter-master | cut -d " " -f1`
+SLAVE_IP=${slave_addr:1}
+JMX_FILE="./scripts/${TESTCASE_ID}.jmx"
+OUTPUT_FILE="${TESTCASE_ID}.jtl"
+LOG_FILE="${TESTCASE_ID}.log"
+# =================================
+ 
+# == change jmeter parameters(ex:HEAP) ==
+jmeter_path=/jmeter/apache-jmeter-3.3/bin
+kubectl exec -it ${MASTER_POD} -- sed "s@HEAP=\"-Xms512m -Xmx512m\"@HEAP=\"-Xms512m -Xmx${MAX_JVM_MEM}\"@g" ${jmeter_path}/jmeter > ./tmp
+kubectl cp ./tmp ${MASTER_POD}:${jmeter_path}/jmeter" 
+# ======================
+
+WDIR=`kubectl exec -it ${MASTER_POD} -- /bin/pwd | tr -d '\r'`
+mkdir -p results
+ 
+NAME=$(basename ${JMX_FILE})
+NAME="${NAME%.*}"
+echo "***** Start stress test for [${NAME}] *****"
+
+kubectl exec ${MASTER_POD} -- mkdir -p $WDIR/scripts
+kubectl cp ${JMX_FILE} ${MASTER_POD}:$WDIR/scripts
+kubectl exec -it ${MASTER_POD} -- mkdir -p ${NAME}
+kubectl exec -it ${MASTER_POD} -- jmeter -n -t ./scripts/${NAME}.jmx -e -l ${NAME}/${OUTPUT_FILE} -j ${NAME}/${LOG_FILE} -R ${SLAVE_IP}
+kubectl cp ${MASTER_POD}:$WDIR/$NAME/${OUTPUT_FILE} results/${OUTPUT_FILE}
+kubectl exec -it ${MASTER_POD} -- rm -rf ${NAME}
+kubectl exec -it ${MASTER_POD} -- rm -rf /jmeter/apache-jmeter-3.3/bin/report-output
+
+echo "***** Finish Successfully *****"
+
