@@ -40,15 +40,18 @@ LOG_FILE="${TESTCASE_ID}.log"
 # == change jmeter parameters(ex:HEAP) ==
 jmeter_path=/jmeter/apache-jmeter-3.3/bin
 kubectl exec -it ${MASTER_POD} -- sed "s@HEAP=\"-Xms512m -Xmx512m\"@HEAP=\"-Xms512m -Xmx${MAX_JVM_MEM}\"@g" ${jmeter_path}/jmeter > ./tmp
-kubectl cp ./tmp ${MASTER_POD}:${jmeter_path}/jmeter" 
+kubectl cp ./tmp ${MASTER_POD}:${jmeter_path}/jmeter 
 # ======================
+
+
+# === RUN stress test ===
+echo "***** Start stress test for [${TESTCASE_ID}] *****"
 
 WDIR=`kubectl exec -it ${MASTER_POD} -- /bin/pwd | tr -d '\r'`
 mkdir -p results
  
 NAME=$(basename ${JMX_FILE})
 NAME="${NAME%.*}"
-echo "***** Start stress test for [${NAME}] *****"
 
 kubectl exec ${MASTER_POD} -- mkdir -p $WDIR/scripts
 kubectl cp ${JMX_FILE} ${MASTER_POD}:$WDIR/scripts
@@ -58,5 +61,5 @@ kubectl cp ${MASTER_POD}:$WDIR/$NAME/${OUTPUT_FILE} results/${OUTPUT_FILE}
 kubectl exec -it ${MASTER_POD} -- rm -rf ${NAME}
 kubectl exec -it ${MASTER_POD} -- rm -rf /jmeter/apache-jmeter-3.3/bin/report-output
 
-echo "***** Finish Successfully *****"
+echo "***** Finish successfully !!! *****"
 
