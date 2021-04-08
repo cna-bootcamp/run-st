@@ -43,6 +43,7 @@ eval "kubectl cp ${MASTER_POD}:${jmeter_path}/jmeter jmeter"
 sed "s@HEAP=\"-Xms512m -Xmx512m\"@HEAP=\"-Xms512m -Xmx${MAX_JVM_MEM}\"@g" ./jmeter > ./tmp && mv ./tmp ./jmeter
 chmod +x ./jmeter
 eval "kubectl cp ./jmeter ${MASTER_POD}:${jmeter_path}/jmeter"
+rm -f ./jmeter
 # ======================
 
 
@@ -61,6 +62,7 @@ eval "kubectl exec -it ${MASTER_POD} -- mkdir -p ${NAME}"
 eval "kubectl exec -it ${MASTER_POD} -- jmeter -n -t ./scripts/${NAME}.jmx -e -l ${NAME}/${OUTPUT_FILE} -j ${NAME}/${LOG_FILE} -R ${SLAVE_IP}"
 if [ $? -eq 0 ]; then
   eval "kubectl cp ${MASTER_POD}:$WDIR/$NAME/${OUTPUT_FILE} results/${OUTPUT_FILE}"
+  eval "kubectl cp ${MASTER_POD}:$WDIR/$NAME/${LOG_FILE} results/${LOG_FILE}"
   eval "kubectl exec -it ${MASTER_POD} -- rm -rf ${NAME}"
   eval "kubectl exec -it ${MASTER_POD} -- rm -rf /jmeter/apache-jmeter-3.3/bin/report-output"
 

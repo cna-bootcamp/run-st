@@ -1,0 +1,410 @@
+2021-04-08 12:55:21,561 INFO o.a.j.u.JMeterUtils: Setting Locale to en
+2021-04-08 12:55:21,573 INFO o.a.j.JMeter: Loading user properties from: /jmeter/apache-jmeter-3.3/bin/user.properties
+2021-04-08 12:55:21,574 INFO o.a.j.JMeter: Loading system properties from: /jmeter/apache-jmeter-3.3/bin/system.properties
+2021-04-08 12:55:21,578 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2021-04-08 12:55:21,579 INFO o.a.j.JMeter: Version 3.3 r1808647
+2021-04-08 12:55:21,579 INFO o.a.j.JMeter: java.version=1.8.0_181
+2021-04-08 12:55:21,579 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2021-04-08 12:55:21,579 INFO o.a.j.JMeter: os.name=Linux
+2021-04-08 12:55:21,579 INFO o.a.j.JMeter: os.arch=amd64
+2021-04-08 12:55:21,579 INFO o.a.j.JMeter: os.version=4.18.0-240.15.1.el8_3.x86_64
+2021-04-08 12:55:21,579 INFO o.a.j.JMeter: file.encoding=UTF-8
+2021-04-08 12:55:21,579 INFO o.a.j.JMeter: Max memory     =5368709120
+2021-04-08 12:55:21,579 INFO o.a.j.JMeter: Available Processors =8
+2021-04-08 12:55:21,583 INFO o.a.j.JMeter: Default Locale=English
+2021-04-08 12:55:21,584 INFO o.a.j.JMeter: JMeter  Locale=English
+2021-04-08 12:55:21,584 INFO o.a.j.JMeter: JMeterHome=/jmeter/apache-jmeter-3.3
+2021-04-08 12:55:21,584 INFO o.a.j.JMeter: user.dir  =/jmeter/apache-jmeter-3.3
+2021-04-08 12:55:21,584 INFO o.a.j.JMeter: PWD       =/jmeter/apache-jmeter-3.3
+2021-04-08 12:55:21,584 INFO o.a.j.JMeter: IP: 192.168.193.153 Name: jmeter-distributed-jmeter-master-656d8f8d69-fwq48 FullName: jmeter-distributed-jmeter-master-656d8f8d69-fwq48
+2021-04-08 12:55:21,587 INFO o.a.j.s.FileServer: Default base='/jmeter/apache-jmeter-3.3'
+2021-04-08 12:55:21,587 INFO o.a.j.s.FileServer: Set new base='/jmeter/apache-jmeter-3.3/./scripts'
+2021-04-08 12:55:21,728 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2021-04-08 12:55:21,742 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2021-04-08 12:55:21,747 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+2021-04-08 12:55:21,754 INFO o.a.j.s.SaveService: Loading file: ./scripts/front.jmx
+2021-04-08 12:55:21,799 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-04-08 12:55:21,799 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-04-08 12:55:21,799 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-04-08 12:55:21,799 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-04-08 12:55:21,799 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2021-04-08 12:55:21,800 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2021-04-08 12:55:21,827 INFO o.a.j.JMeter: Creating summariser <summary>
+2021-04-08 12:55:21,833 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: '	'
+2021-04-08 12:55:21,833 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: front/front.jtl
+2021-04-08 12:55:21,834 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: /jmeter/apache-jmeter-3.3/bin/reportgenerator.properties
+2021-04-08 12:55:21,834 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2021-04-08 12:55:21,840 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2021-04-08 12:55:21,843 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2021-04-08 12:55:21,843 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction : {} is empty, not APDEX per transaction customization
+2021-04-08 12:55:21,843 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2021-04-08 12:55:21,843 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2021-04-08 12:55:21,843 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2021-04-08 12:55:21,843 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2021-04-08 12:55:21,843 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2021-04-08 12:55:21,844 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2021-04-08 12:55:21,848 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2021-04-08 12:55:21,848 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2021-04-08 12:55:21,848 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2021-04-08 12:55:21,848 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2021-04-08 12:55:21,849 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2021-04-08 12:55:21,849 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2021-04-08 12:55:21,849 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2021-04-08 12:55:21,849 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2021-04-08 12:55:21,850 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2021-04-08 12:55:21,851 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2021-04-08 12:55:21,851 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2021-04-08 12:55:21,851 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2021-04-08 12:55:21,854 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.132:1099
+2021-04-08 12:55:21,931 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.189.191:1099
+2021-04-08 12:55:21,993 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.224.239:1099
+2021-04-08 12:55:22,048 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.184:1099
+2021-04-08 12:55:22,081 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.155:1099
+2021-04-08 12:55:22,125 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.178:1099
+2021-04-08 12:55:22,159 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.179:1099
+2021-04-08 12:55:22,190 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.224.215:1099
+2021-04-08 12:55:22,247 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.176:1099
+2021-04-08 12:55:22,283 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.159:1099
+2021-04-08 12:55:22,315 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.170:1099
+2021-04-08 12:55:22,346 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.180:1099
+2021-04-08 12:55:22,389 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.224.248:1099
+2021-04-08 12:55:22,437 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.188:1099
+2021-04-08 12:55:22,469 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.189.141:1099
+2021-04-08 12:55:22,524 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.189.176:1099
+2021-04-08 12:55:22,586 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.224.209:1099
+2021-04-08 12:55:22,648 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.189.172:1099
+2021-04-08 12:55:22,701 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.224.249:1099
+2021-04-08 12:55:22,757 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 192.168.193.191:1099
+2021-04-08 12:55:22,793 INFO o.a.j.e.DistributedRunner: Starting remote engines
+2021-04-08 12:55:22,795 INFO o.a.j.e.DistributedRunner: Starting the test @ Thu Apr 08 12:55:22 UTC 2021 (1617886522794)
+2021-04-08 12:55:22,795 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:22,800 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2021-04-08 12:55:22,800 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2021-04-08 12:55:23,216 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-08 12:55:23,252 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:23,252 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:23,713 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:23,713 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:23,880 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.180:1099 basedir='./scripts'
+2021-04-08 12:55:23,880 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:23,887 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.180:1099
+2021-04-08 12:55:23,887 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:23,888 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:23,888 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:23,900 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:23,900 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,018 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.224.209:1099 basedir='./scripts'
+2021-04-08 12:55:24,019 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:24,026 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.224.209:1099
+2021-04-08 12:55:24,026 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:24,026 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,027 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,042 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,042 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,174 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.189.172:1099 basedir='./scripts'
+2021-04-08 12:55:24,175 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:24,186 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.189.172:1099
+2021-04-08 12:55:24,186 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:24,187 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,187 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,213 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,213 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,331 INFO o.a.j.r.ResultCollector: Folder at /Users/happycloudpak/nsmall/stress was created
+2021-04-08 12:55:24,341 INFO o.a.j.JMeter: Started remote host:  192.168.193.180:1099 (1617886524341)
+2021-04-08 12:55:24,347 INFO o.a.j.JMeter: Started remote host:  192.168.224.209:1099 (1617886524347)
+2021-04-08 12:55:24,388 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.176:1099 basedir='./scripts'
+2021-04-08 12:55:24,388 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:24,395 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.176:1099
+2021-04-08 12:55:24,395 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:24,395 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,395 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,407 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,407 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,532 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.189.141:1099 basedir='./scripts'
+2021-04-08 12:55:24,532 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:24,537 INFO o.a.j.JMeter: Started remote host:  192.168.189.172:1099 (1617886524537)
+2021-04-08 12:55:24,540 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.189.141:1099
+2021-04-08 12:55:24,540 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:24,541 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,541 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,552 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,552 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,653 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.224.248:1099 basedir='./scripts'
+2021-04-08 12:55:24,653 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:24,661 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.224.248:1099
+2021-04-08 12:55:24,661 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:24,662 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,662 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,673 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,674 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,810 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.189.191:1099 basedir='./scripts'
+2021-04-08 12:55:24,810 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:24,817 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.189.191:1099
+2021-04-08 12:55:24,817 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:24,817 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,817 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,829 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,829 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,861 INFO o.a.j.JMeter: Started remote host:  192.168.193.176:1099 (1617886524861)
+2021-04-08 12:55:24,941 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.184:1099 basedir='./scripts'
+2021-04-08 12:55:24,942 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:24,947 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.184:1099
+2021-04-08 12:55:24,947 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:24,947 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,947 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,958 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:24,958 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:24,959 INFO o.a.j.JMeter: Started remote host:  192.168.189.141:1099 (1617886524959)
+2021-04-08 12:55:25,023 INFO o.a.j.JMeter: Started remote host:  192.168.224.248:1099 (1617886525023)
+2021-04-08 12:55:25,168 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.224.249:1099 basedir='./scripts'
+2021-04-08 12:55:25,168 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:25,177 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.224.249:1099
+2021-04-08 12:55:25,177 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:25,178 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:25,178 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:25,189 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:25,189 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:25,196 INFO o.a.j.JMeter: Started remote host:  192.168.189.191:1099 (1617886525196)
+2021-04-08 12:55:25,369 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.155:1099 basedir='./scripts'
+2021-04-08 12:55:25,369 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:25,378 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.155:1099
+2021-04-08 12:55:25,378 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:25,378 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:25,378 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:25,394 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:25,394 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:25,409 INFO o.a.j.JMeter: Started remote host:  192.168.193.184:1099 (1617886525409)
+2021-04-08 12:55:25,552 INFO o.a.j.JMeter: Started remote host:  192.168.224.249:1099 (1617886525552)
+2021-04-08 12:55:25,614 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.179:1099 basedir='./scripts'
+2021-04-08 12:55:25,614 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:25,620 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.179:1099
+2021-04-08 12:55:25,620 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:25,620 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:25,620 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:25,631 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:25,631 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:25,797 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.224.239:1099 basedir='./scripts'
+2021-04-08 12:55:25,797 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:25,807 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.224.239:1099
+2021-04-08 12:55:25,807 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:25,808 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:25,808 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:25,819 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:25,819 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:25,835 INFO o.a.j.JMeter: Started remote host:  192.168.193.155:1099 (1617886525835)
+2021-04-08 12:55:25,974 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.188:1099 basedir='./scripts'
+2021-04-08 12:55:25,974 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:25,981 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.188:1099
+2021-04-08 12:55:25,981 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:25,981 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:25,981 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:25,996 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:25,996 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:26,116 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.224.215:1099 basedir='./scripts'
+2021-04-08 12:55:26,116 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:26,131 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.224.215:1099
+2021-04-08 12:55:26,131 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:26,132 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:26,132 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:26,145 INFO o.a.j.JMeter: Started remote host:  192.168.193.179:1099 (1617886526145)
+2021-04-08 12:55:26,168 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:26,168 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:26,221 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2021-04-08 12:55:26,221 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2021-04-08 12:55:26,222 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2021-04-08 12:55:26,222 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2021-04-08 12:55:26,256 INFO o.a.j.JMeter: Started remote host:  192.168.224.239:1099 (1617886526256)
+2021-04-08 12:55:26,339 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.132:1099 basedir='./scripts'
+2021-04-08 12:55:26,339 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:26,347 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.132:1099
+2021-04-08 12:55:26,347 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:26,347 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:26,348 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:26,363 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:26,364 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:26,545 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.189.176:1099 basedir='./scripts'
+2021-04-08 12:55:26,545 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:26,560 INFO o.a.j.JMeter: Started remote host:  192.168.193.188:1099 (1617886526560)
+2021-04-08 12:55:26,571 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.189.176:1099
+2021-04-08 12:55:26,571 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:26,571 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:26,572 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:26,581 INFO o.a.j.JMeter: Started remote host:  192.168.224.215:1099 (1617886526581)
+2021-04-08 12:55:26,587 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:26,587 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:26,774 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.178:1099 basedir='./scripts'
+2021-04-08 12:55:26,774 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:26,782 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.178:1099
+2021-04-08 12:55:26,782 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:26,783 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:26,783 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:26,793 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:26,793 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:26,956 INFO o.a.j.JMeter: Started remote host:  192.168.189.176:1099 (1617886526956)
+2021-04-08 12:55:27,024 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.159:1099 basedir='./scripts'
+2021-04-08 12:55:27,024 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:27,038 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.159:1099
+2021-04-08 12:55:27,038 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:27,039 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:27,039 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:27,042 INFO o.a.j.JMeter: Started remote host:  192.168.193.132:1099 (1617886527042)
+2021-04-08 12:55:27,051 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:27,051 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:27,211 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.170:1099 basedir='./scripts'
+2021-04-08 12:55:27,211 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:27,226 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.170:1099
+2021-04-08 12:55:27,226 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2021-04-08 12:55:27,227 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:27,227 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:27,242 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2021-04-08 12:55:27,242 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2021-04-08 12:55:27,402 INFO o.a.j.JMeter: Started remote host:  192.168.193.178:1099 (1617886527402)
+2021-04-08 12:55:27,524 INFO o.a.j.e.ClientJMeterEngine: sent test to 192.168.193.191:1099 basedir='./scripts'
+2021-04-08 12:55:27,524 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2021-04-08 12:55:27,540 INFO o.a.j.e.ClientJMeterEngine: sent run command to 192.168.193.191:1099
+2021-04-08 12:55:27,540 INFO o.a.j.e.DistributedRunner: Remote engines have been started
+2021-04-08 12:55:27,688 INFO o.a.j.JMeter: Started remote host:  192.168.193.159:1099 (1617886527688)
+2021-04-08 12:55:28,018 INFO o.a.j.JMeter: Started remote host:  192.168.193.170:1099 (1617886528018)
+2021-04-08 12:55:28,120 INFO o.a.j.JMeter: Started remote host:  192.168.193.191:1099 (1617886528119)
+2021-04-08 12:56:04,967 INFO o.a.j.r.Summariser: summary +   2021 in 00:00:41 =   49.7/s Avg:    44 Min:    10 Max:  2302 Err:     0 (0.00%) Active: 1947 Started: 1877 Finished: 0
+2021-04-08 12:56:30,764 INFO o.a.j.r.Summariser: summary +   5900 in 00:00:26 =  228.7/s Avg:    27 Min:     8 Max:   159 Err:     0 (0.00%) Active: 3233 Started: 3163 Finished: 0
+2021-04-08 12:56:30,765 INFO o.a.j.r.Summariser: summary =   7921 in 00:01:06 =  119.3/s Avg:    31 Min:     8 Max:  2302 Err:     0 (0.00%)
+2021-04-08 12:57:00,197 INFO o.a.j.r.Summariser: summary +   8100 in 00:00:29 =  275.2/s Avg:    17 Min:     7 Max:   184 Err:     0 (0.00%) Active: 4703 Started: 4633 Finished: 0
+2021-04-08 12:57:00,198 INFO o.a.j.r.Summariser: summary =  16021 in 00:01:36 =  167.1/s Avg:    24 Min:     7 Max:  2302 Err:     0 (0.00%)
+2021-04-08 12:57:30,373 INFO o.a.j.r.Summariser: summary +  11200 in 00:00:30 =  371.2/s Avg:    15 Min:     7 Max:   159 Err:     0 (0.00%) Active: 6208 Started: 6138 Finished: 0
+2021-04-08 12:57:30,373 INFO o.a.j.r.Summariser: summary =  27221 in 00:02:06 =  216.0/s Avg:    20 Min:     7 Max:  2302 Err:     0 (0.00%)
+2021-04-08 12:58:00,120 INFO o.a.j.r.Summariser: summary +   2800 in 00:00:30 =   94.1/s Avg:    19 Min:     8 Max:   168 Err:     0 (0.00%) Active: 7693 Started: 7623 Finished: 0
+2021-04-08 12:58:00,120 INFO o.a.j.r.Summariser: summary =  30021 in 00:02:36 =  192.7/s Avg:    20 Min:     7 Max:  2302 Err:     0 (0.00%)
+2021-04-08 12:58:30,062 INFO o.a.j.r.Summariser: summary +   1800 in 00:00:30 =   60.1/s Avg:  3910 Min:     8 Max: 60298 Err:     0 (0.00%) Active: 9186 Started: 9116 Finished: 0
+2021-04-08 12:58:30,063 INFO o.a.j.r.Summariser: summary =  31821 in 00:03:06 =  171.3/s Avg:   240 Min:     7 Max: 60298 Err:     0 (0.00%)
+2021-04-08 12:59:00,142 INFO o.a.j.r.Summariser: summary +  15100 in 00:00:30 =  502.0/s Avg: 26492 Min:    10 Max: 64654 Err:     0 (0.00%) Active: 10687 Started: 10617 Finished: 0
+2021-04-08 12:59:00,143 INFO o.a.j.r.Summariser: summary =  46921 in 00:03:36 =  217.4/s Avg:  8688 Min:     7 Max: 64654 Err:     0 (0.00%)
+2021-04-08 12:59:30,367 INFO o.a.j.r.Summariser: summary +  23700 in 00:00:30 =  784.1/s Avg:  4368 Min:    10 Max: 120607 Err:     0 (0.00%) Active: 12193 Started: 12123 Finished: 0
+2021-04-08 12:59:30,367 INFO o.a.j.r.Summariser: summary =  70621 in 00:04:06 =  287.0/s Avg:  7239 Min:     7 Max: 120607 Err:     0 (0.00%)
+2021-04-08 13:00:00,398 INFO o.a.j.r.Summariser: summary +  23500 in 00:00:30 =  782.5/s Avg:    97 Min:     9 Max: 120323 Err:     0 (0.00%) Active: 13693 Started: 13623 Finished: 0
+2021-04-08 13:00:00,398 INFO o.a.j.r.Summariser: summary =  94121 in 00:04:36 =  340.9/s Avg:  5456 Min:     7 Max: 120607 Err:     0 (0.00%)
+2021-04-08 13:00:31,616 INFO o.a.j.r.Summariser: summary +    700 in 00:00:31 =   22.4/s Avg:   586 Min:     9 Max:  7166 Err:     0 (0.00%) Active: 15251 Started: 15181 Finished: 0
+2021-04-08 13:00:31,616 INFO o.a.j.r.Summariser: summary =  94821 in 00:05:07 =  308.6/s Avg:  5420 Min:     7 Max: 120607 Err:     0 (0.00%)
+2021-04-08 13:01:00,059 INFO o.a.j.r.Summariser: summary +   5800 in 00:00:28 =  203.9/s Avg: 13159 Min:     9 Max: 64248 Err:     0 (0.00%) Active: 16670 Started: 16600 Finished: 0
+2021-04-08 13:01:00,059 INFO o.a.j.r.Summariser: summary = 100621 in 00:05:36 =  299.7/s Avg:  5866 Min:     7 Max: 120607 Err:     0 (0.00%)
+2021-04-08 13:01:30,111 INFO o.a.j.r.Summariser: summary +  22100 in 00:00:30 =  735.4/s Avg: 22718 Min:     8 Max: 66112 Err:     0 (0.00%) Active: 18169 Started: 18099 Finished: 0
+2021-04-08 13:01:30,112 INFO o.a.j.r.Summariser: summary = 122721 in 00:06:06 =  335.5/s Avg:  8901 Min:     7 Max: 120607 Err:     0 (0.00%)
+2021-04-08 13:02:00,007 INFO o.a.j.r.Summariser: summary +  24800 in 00:00:30 =  829.5/s Avg:  1774 Min:     8 Max: 64324 Err:     0 (0.00%) Active: 19657 Started: 19587 Finished: 0
+2021-04-08 13:02:00,008 INFO o.a.j.r.Summariser: summary = 147521 in 00:06:36 =  372.8/s Avg:  7703 Min:     7 Max: 120607 Err:     0 (0.00%)
+2021-04-08 13:02:30,906 INFO o.a.j.r.Summariser: summary +  17000 in 00:00:31 =  550.2/s Avg: 35709 Min:     8 Max: 132532 Err:  4497 (26.45%) Active: 21199 Started: 21129 Finished: 0
+2021-04-08 13:02:30,907 INFO o.a.j.r.Summariser: summary = 164521 in 00:07:07 =  385.7/s Avg: 10596 Min:     7 Max: 132532 Err:  4497 (2.73%)
+2021-04-08 13:03:00,902 INFO o.a.j.r.Summariser: summary +   1900 in 00:00:30 =   63.3/s Avg: 53869 Min:    11 Max: 132404 Err:   663 (34.89%) Active: 22695 Started: 22625 Finished: 0
+2021-04-08 13:03:00,903 INFO o.a.j.r.Summariser: summary = 166421 in 00:07:37 =  364.5/s Avg: 11091 Min:     7 Max: 132532 Err:  5160 (3.10%)
+2021-04-08 13:03:30,257 INFO o.a.j.r.Summariser: summary +  15100 in 00:00:29 =  514.4/s Avg: 32719 Min:     8 Max: 132378 Err:   143 (0.95%) Active: 24162 Started: 24092 Finished: 0
+2021-04-08 13:03:30,257 INFO o.a.j.r.Summariser: summary = 181521 in 00:08:06 =  373.6/s Avg: 12890 Min:     7 Max: 132532 Err:  5303 (2.92%)
+2021-04-08 13:04:00,099 INFO o.a.j.r.Summariser: summary +  24000 in 00:00:30 =  804.2/s Avg:  9901 Min:     8 Max: 132386 Err:   221 (0.92%) Active: 25649 Started: 25579 Finished: 0
+2021-04-08 13:04:00,099 INFO o.a.j.r.Summariser: summary = 205521 in 00:08:36 =  398.5/s Avg: 12541 Min:     7 Max: 132532 Err:  5524 (2.69%)
+2021-04-08 13:04:30,022 INFO o.a.j.r.Summariser: summary +  26000 in 00:00:30 =  868.9/s Avg: 17419 Min:     9 Max: 132411 Err:  2991 (11.50%) Active: 27144 Started: 27074 Finished: 0
+2021-04-08 13:04:30,023 INFO o.a.j.r.Summariser: summary = 231521 in 00:09:06 =  424.3/s Avg: 13088 Min:     7 Max: 132532 Err:  8515 (3.68%)
+2021-04-08 13:05:01,125 INFO o.a.j.r.Summariser: summary +   8700 in 00:00:31 =  279.7/s Avg: 97065 Min:     9 Max: 132429 Err:  6407 (73.64%) Active: 28696 Started: 28626 Finished: 0
+2021-04-08 13:05:01,126 INFO o.a.j.r.Summariser: summary = 240221 in 00:09:37 =  416.5/s Avg: 16130 Min:     7 Max: 132532 Err: 14922 (6.21%)
+2021-04-08 13:05:30,290 INFO o.a.j.r.Summariser: summary +   5600 in 00:00:29 =  192.0/s Avg: 34784 Min:    10 Max: 132396 Err:   694 (12.39%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:05:30,290 INFO o.a.j.r.Summariser: summary = 245821 in 00:10:06 =  405.7/s Avg: 16555 Min:     7 Max: 132532 Err: 15616 (6.35%)
+2021-04-08 13:06:00,020 INFO o.a.j.r.Summariser: summary +  22600 in 00:00:30 =  760.2/s Avg: 30063 Min:     9 Max: 132392 Err:   669 (2.96%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:06:00,021 INFO o.a.j.r.Summariser: summary = 268421 in 00:10:36 =  422.3/s Avg: 17692 Min:     7 Max: 132532 Err: 16285 (6.07%)
+2021-04-08 13:06:30,006 INFO o.a.j.r.Summariser: summary +  26900 in 00:00:30 =  897.1/s Avg: 11882 Min:     8 Max: 132399 Err:  1629 (6.06%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:06:30,007 INFO o.a.j.r.Summariser: summary = 295321 in 00:11:06 =  443.6/s Avg: 17163 Min:     7 Max: 132532 Err: 17914 (6.07%)
+2021-04-08 13:07:00,054 INFO o.a.j.r.Summariser: summary +  21600 in 00:00:30 =  718.8/s Avg: 58793 Min:     8 Max: 132420 Err:  9510 (44.03%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:07:00,054 INFO o.a.j.r.Summariser: summary = 316921 in 00:11:36 =  455.5/s Avg: 20000 Min:     7 Max: 132532 Err: 27424 (8.65%)
+2021-04-08 13:07:31,600 INFO o.a.j.r.Summariser: summary +   5300 in 00:00:32 =  168.0/s Avg: 89680 Min:    10 Max: 132529 Err:  3517 (66.36%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:07:31,601 INFO o.a.j.r.Summariser: summary = 322221 in 00:12:07 =  443.1/s Avg: 21146 Min:     7 Max: 132532 Err: 30941 (9.60%)
+2021-04-08 13:08:00,224 INFO o.a.j.r.Summariser: summary +  14000 in 00:00:29 =  489.1/s Avg: 36266 Min:     8 Max: 132378 Err:   380 (2.71%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:08:00,225 INFO o.a.j.r.Summariser: summary = 336221 in 00:12:36 =  444.8/s Avg: 21776 Min:     7 Max: 132532 Err: 31321 (9.32%)
+2021-04-08 13:08:30,235 INFO o.a.j.r.Summariser: summary +  25200 in 00:00:30 =  839.7/s Avg: 15645 Min:     8 Max: 132392 Err:   675 (2.68%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:08:30,236 INFO o.a.j.r.Summariser: summary = 361421 in 00:13:06 =  459.9/s Avg: 21348 Min:     7 Max: 132532 Err: 31996 (8.85%)
+2021-04-08 13:09:00,059 INFO o.a.j.r.Summariser: summary +  28000 in 00:00:30 =  938.9/s Avg: 27571 Min:     8 Max: 132407 Err:  5497 (19.63%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:09:00,059 INFO o.a.j.r.Summariser: summary = 389421 in 00:13:36 =  477.4/s Avg: 21796 Min:     7 Max: 132532 Err: 37493 (9.63%)
+2021-04-08 13:09:31,953 INFO o.a.j.r.Summariser: summary +  11400 in 00:00:32 =  357.4/s Avg: 94657 Min:     9 Max: 132417 Err:  8170 (71.67%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:09:31,953 INFO o.a.j.r.Summariser: summary = 400821 in 00:14:08 =  472.9/s Avg: 23868 Min:     7 Max: 132532 Err: 45663 (11.39%)
+2021-04-08 13:10:00,192 INFO o.a.j.r.Summariser: summary +   5300 in 00:00:28 =  187.7/s Avg: 39805 Min:     9 Max: 132387 Err:   961 (18.13%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:10:00,193 INFO o.a.j.r.Summariser: summary = 406121 in 00:14:36 =  463.7/s Avg: 24076 Min:     7 Max: 132532 Err: 46624 (11.48%)
+2021-04-08 13:10:30,214 INFO o.a.j.r.Summariser: summary +  22200 in 00:00:30 =  739.5/s Avg: 29299 Min:     8 Max: 132384 Err:   370 (1.67%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:10:30,214 INFO o.a.j.r.Summariser: summary = 428321 in 00:15:06 =  472.8/s Avg: 24347 Min:     7 Max: 132532 Err: 46994 (10.97%)
+2021-04-08 13:11:00,160 INFO o.a.j.r.Summariser: summary +  27200 in 00:00:30 =  908.3/s Avg: 11312 Min:     8 Max: 132398 Err:  1472 (5.41%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:11:00,161 INFO o.a.j.r.Summariser: summary = 455521 in 00:15:36 =  486.8/s Avg: 23569 Min:     7 Max: 132532 Err: 48466 (10.64%)
+2021-04-08 13:11:30,750 INFO o.a.j.r.Summariser: summary +  21900 in 00:00:31 =  716.0/s Avg: 60846 Min:     8 Max: 132496 Err: 10006 (45.69%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:11:30,750 INFO o.a.j.r.Summariser: summary = 477421 in 00:16:06 =  494.0/s Avg: 25279 Min:     7 Max: 132532 Err: 58472 (12.25%)
+2021-04-08 13:12:00,090 INFO o.a.j.r.Summariser: summary +   5400 in 00:00:29 =  184.0/s Avg: 83363 Min:    10 Max: 132411 Err:  3307 (61.24%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:12:00,091 INFO o.a.j.r.Summariser: summary = 482821 in 00:16:36 =  484.9/s Avg: 25928 Min:     7 Max: 132532 Err: 61779 (12.80%)
+2021-04-08 13:12:30,031 INFO o.a.j.r.Summariser: summary +  13000 in 00:00:30 =  434.2/s Avg: 35925 Min:     9 Max: 132388 Err:   456 (3.51%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:12:30,032 INFO o.a.j.r.Summariser: summary = 495821 in 00:17:06 =  483.4/s Avg: 26190 Min:     7 Max: 132532 Err: 62235 (12.55%)
+2021-04-08 13:13:00,020 INFO o.a.j.r.Summariser: summary +  25500 in 00:00:30 =  850.3/s Avg: 16042 Min:     8 Max: 132388 Err:   451 (1.77%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:13:00,020 INFO o.a.j.r.Summariser: summary = 521321 in 00:17:36 =  493.8/s Avg: 25694 Min:     7 Max: 132532 Err: 62686 (12.02%)
+2021-04-08 13:13:30,231 INFO o.a.j.r.Summariser: summary +  28200 in 00:00:30 =  933.4/s Avg: 29858 Min:     8 Max: 132418 Err:  6094 (21.61%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:13:30,231 INFO o.a.j.r.Summariser: summary = 549521 in 00:18:06 =  506.1/s Avg: 25908 Min:     7 Max: 132532 Err: 68780 (12.52%)
+2021-04-08 13:14:00,227 INFO o.a.j.r.Summariser: summary +  12000 in 00:00:30 =  400.1/s Avg: 86309 Min:     9 Max: 132433 Err:  7801 (65.01%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:14:00,227 INFO o.a.j.r.Summariser: summary = 561521 in 00:18:36 =  503.2/s Avg: 27198 Min:     7 Max: 132532 Err: 76581 (13.64%)
+2021-04-08 13:14:30,129 INFO o.a.j.r.Summariser: summary +   5400 in 00:00:30 =  180.6/s Avg: 39764 Min:    10 Max: 132386 Err:  1015 (18.80%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:14:30,130 INFO o.a.j.r.Summariser: summary = 566921 in 00:19:06 =  494.8/s Avg: 27318 Min:     7 Max: 132532 Err: 77596 (13.69%)
+2021-04-08 13:15:00,210 INFO o.a.j.r.Summariser: summary +  20600 in 00:00:30 =  684.8/s Avg: 29336 Min:     8 Max: 132387 Err:   223 (1.08%) Active: 30000 Started: 29930 Finished: 0
+2021-04-08 13:15:00,210 INFO o.a.j.r.Summariser: summary = 587521 in 00:19:36 =  499.6/s Avg: 27389 Min:     7 Max: 132532 Err: 77819 (13.25%)
+2021-04-08 13:15:30,814 INFO o.a.j.r.Summariser: summary +  26300 in 00:00:31 =  859.4/s Avg: 11173 Min:     9 Max: 132720 Err:  1207 (4.59%) Active: 13972 Started: 29930 Finished: 16028
+2021-04-08 13:15:30,814 INFO o.a.j.r.Summariser: summary = 613821 in 00:20:06 =  508.8/s Avg: 26694 Min:     7 Max: 132720 Err: 79026 (12.87%)
+2021-04-08 13:16:01,116 INFO o.a.j.r.Summariser: summary +  11000 in 00:00:30 =  363.1/s Avg: 122196 Min:     9 Max: 132811 Err: 10195 (92.68%) Active: 2712 Started: 29930 Finished: 27288
+2021-04-08 13:16:01,117 INFO o.a.j.r.Summariser: summary = 624821 in 00:20:37 =  505.2/s Avg: 28375 Min:     7 Max: 132811 Err: 89221 (14.28%)
+2021-04-08 13:16:27,156 INFO o.a.j.JMeter: Finished remote host: 192.168.189.172:1099 (1617887787156)
+2021-04-08 13:16:27,157 INFO o.a.j.JMeter: Finished remote host: 192.168.189.191:1099 (1617887787157)
+2021-04-08 13:16:58,415 INFO o.a.j.JMeter: Finished remote host: 192.168.193.132:1099 (1617887818415)
+2021-04-08 13:17:02,526 INFO o.a.j.r.Summariser: summary +   2957 in 00:01:01 =   48.1/s Avg: 130143 Min: 63830 Max: 132441 Err:  2941 (99.46%) Active: 43 Started: 29930 Finished: 29957
+2021-04-08 13:17:02,526 INFO o.a.j.r.Summariser: summary = 627778 in 00:21:38 =  483.6/s Avg: 28855 Min:     7 Max: 132811 Err: 92162 (14.68%)
+2021-04-08 13:17:02,530 INFO o.a.j.JMeter: Finished remote host: 192.168.193.155:1099 (1617887822530)
+2021-04-08 13:17:10,705 INFO o.a.j.JMeter: Finished remote host: 192.168.193.179:1099 (1617887830705)
+2021-04-08 13:17:14,800 INFO o.a.j.JMeter: Finished remote host: 192.168.193.170:1099 (1617887834800)
+2021-04-08 13:17:22,989 INFO o.a.j.JMeter: Finished remote host: 192.168.193.159:1099 (1617887842989)
+2021-04-08 13:17:28,278 INFO o.a.j.JMeter: Finished remote host: 192.168.224.215:1099 (1617887848277)
+2021-04-08 13:17:28,278 INFO o.a.j.JMeter: Finished remote host: 192.168.224.248:1099 (1617887848278)
+2021-04-08 13:17:31,178 INFO o.a.j.r.Summariser: summary +    733 in 00:00:29 =   25.6/s Avg: 130623 Min: 128300 Max: 132419 Err:   733 (100.00%) Active: 12 Started: 29930 Finished: 29988
+2021-04-08 13:17:31,180 INFO o.a.j.r.Summariser: summary = 628511 in 00:22:07 =  473.7/s Avg: 28973 Min:     7 Max: 132811 Err: 92895 (14.78%)
+2021-04-08 13:17:31,181 INFO o.a.j.JMeter: Finished remote host: 192.168.193.180:1099 (1617887851181)
+2021-04-08 13:17:31,181 INFO o.a.j.JMeter: Finished remote host: 192.168.193.188:1099 (1617887851181)
+2021-04-08 13:17:31,181 INFO o.a.j.JMeter: Finished remote host: 192.168.193.184:1099 (1617887851181)
+2021-04-08 13:17:31,183 INFO o.a.j.JMeter: Finished remote host: 192.168.193.191:1099 (1617887851183)
+2021-04-08 13:17:32,369 INFO o.a.j.JMeter: Finished remote host: 192.168.224.239:1099 (1617887852369)
+2021-04-08 13:17:32,369 INFO o.a.j.JMeter: Finished remote host: 192.168.224.209:1099 (1617887852369)
+2021-04-08 13:17:32,691 INFO o.a.j.JMeter: Finished remote host: 192.168.189.141:1099 (1617887852691)
+2021-04-08 13:17:35,278 INFO o.a.j.JMeter: Finished remote host: 192.168.193.176:1099 (1617887855278)
+2021-04-08 13:17:36,471 INFO o.a.j.JMeter: Finished remote host: 192.168.224.249:1099 (1617887856471)
+2021-04-08 13:17:36,787 INFO o.a.j.JMeter: Finished remote host: 192.168.189.176:1099 (1617887856787)
+2021-04-08 13:17:39,371 INFO o.a.j.r.Summariser: summary +    243 in 00:00:08 =   29.7/s Avg: 130509 Min: 128302 Max: 132391 Err:   243 (100.00%) Active: 0 Started: 29930 Finished: 30000
+2021-04-08 13:17:39,372 INFO o.a.j.r.Summariser: summary = 628754 in 00:22:15 =  471.0/s Avg: 29013 Min:     7 Max: 132811 Err: 93138 (14.81%)
+2021-04-08 13:17:39,372 INFO o.a.j.JMeter: Finished remote host: 192.168.193.178:1099 (1617887859372)
+2021-04-08 13:17:44,381 INFO o.a.j.JMeter: Interrupting RMI Reaper
+2021-04-08 13:17:44,382 INFO o.a.j.JMeter: Generating Dashboard
+2021-04-08 13:17:44,382 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2021-04-08 13:17:44,403 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2021-04-08 13:18:03,480 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2021-04-08 13:18:03,480 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2021-04-08 13:18:03,481 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2021-04-08 13:18:03,481 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2021-04-08 13:18:03,494 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2021-04-08 13:18:03,495 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2021-04-08 13:18:03,495 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2021-04-08 13:18:03,495 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2021-04-08 13:18:06,639 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2021-04-08 13:18:06,662 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2021-04-08 13:18:06,663 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2021-04-08 13:18:06,663 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2021-04-08 13:18:09,713 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2021-04-08 13:18:09,731 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 4401278 samples
+2021-04-08 13:18:09,731 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2021-04-08 13:18:09,731 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2021-04-08 13:18:09,734 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2021-04-08 13:18:09,734 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2021-04-08 13:18:09,734 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2021-04-08 13:18:09,753 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2021-04-08 13:18:09,795 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2021-04-08 13:18:09,796 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2021-04-08 13:18:09,796 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2021-04-08 13:18:09,796 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 8802556 samples
+2021-04-08 13:18:09,796 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 1886262 samples
+2021-04-08 13:18:09,796 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 628754 samples
+2021-04-08 13:18:09,796 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 628754 samples produced in 25s 380 ms on channel 0
+2021-04-08 13:18:09,796 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2021-04-08 13:18:09,799 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: /jmeter/apache-jmeter-3.3/bin/report-output
+2021-04-08 13:18:09,898 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: /jmeter/apache-jmeter-3.3/bin/report-output, creating folder structure
+2021-04-08 13:18:10,233 INFO o.a.j.JMeter: Dashboard generated
