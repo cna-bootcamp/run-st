@@ -1,72 +1,140 @@
 #!/bin/bash
 
+# === Functions ===
+cleanup() {
+    if [ ! -z "${MASTER_POD}" ]; then
+        kubectl exec -it ${MASTER_POD} -- rm -rf ${NAME} || true
+        kubectl exec -it ${MASTER_POD} -- rm -rf /jmeter/apache-jmeter-3.3/bin/report-output || true
+    fi
+}
+
+start_monitoring() {
+    # Pod 상태 모니터링
+    kubectl get pods -w > results/pods.log &
+    PODS_PID=$!
+    echo "Started pod monitoring"
+}
+
+stop_monitoring() {
+    if [ ! -z "${PODS_PID}" ]; then 
+        kill ${PODS_PID} 2>/dev/null || true
+        echo "Stopped pod monitoring"
+    fi
+}
+
+# === Main Script ===
+# Cleanup on script exit
+trap 'cleanup; stop_monitoring' EXIT
+
+# 파라미터 처리
 if ([ $# -lt 1 ]) || ([ $# -eq 1 ] && [ "$1" == "-h" -o "$1" == "--help" ]); then
-  echo "run-st <testcase id> [<max jvm memory>]"
-  echo " testcase id: testcase목적을 나타내는 ID "
-  echo " max jvm momory: ex) 2048m, 2g. default 512m"
-  echo " ex) ./run-st sample"
-  echo " ex) ./run-st sample 5g"
-  read -p "# Testcase ID: " TESTCASE_ID
-  read -p "# MAX JVM Mem(Default: 512m): " MAX_JVM_MEM
-  if [ "${MAX_JVM_MEM}" == "" ]; then
-    MAX_JVM_MEM=512m
-  fi
+    echo "run-st <testcase id> [<max jvm memory>]"
+    echo " testcase id: testcase목적을 나타내는 ID "
+    echo " max jvm momory: ex) 2048m, 2g. default 512m"
+    echo " ex) ./run-st sample"
+    echo " ex) ./run-st sample 5g"
+    read -p "# Testcase ID: " TESTCASE_ID
+    read -p "# MAX JVM Mem(Default: 512m): " MAX_JVM_MEM
+    if [ "${MAX_JVM_MEM}" == "" ]; then
+        MAX_JVM_MEM=512m
+    fi
 else
-  TESTCASE_ID=$1
-  if [ $# -eq 2 ]; then
-    MAX_JVM_MEM=$2
-  else
-    MAX_JVM_MEM=512m
-  fi
+    TESTCASE_ID=$1
+    if [ $# -eq 2 ]; then
+        MAX_JVM_MEM=$2
+    else
+        MAX_JVM_MEM=512m
+    fi
 fi
 
 # === Get slave pod IPs === 
 IPs=`kubectl get po -o wide | grep jmeter-server | awk '{print $6}'`
-
 for ip in ${IPs}
 do
-  slave_addr="${slave_addr},${ip}:1099"
+    slave_addr="${slave_addr},${ip}:1099"
 done
-# =========================
 
-# === set below parameters ========
+# === set parameters ========
 MASTER_POD=`kubectl get po | grep jmeter-master | cut -d " " -f1`
 SLAVE_IP=${slave_addr:1}
 JMX_FILE="./scripts/${TESTCASE_ID}.jmx"
 OUTPUT_FILE="${TESTCASE_ID}.jtl"
 LOG_FILE="${TESTCASE_ID}.log"
-# =================================
- 
-# == change jmeter parameters(ex:HEAP) ==
+ERROR_LOG="${TESTCASE_ID}_error.log"
+
+# Create results directory
+mkdir -p results
+
+# == JMeter 설정 변경 ==
 jmeter_path=/jmeter/apache-jmeter-3.3/bin
+# JMeter의 user.properties 파일 생성
+cat << EOF > user.properties
+jmeter.save.saveservice.assertion_results=all
+jmeter.save.saveservice.response_data=true
+jmeter.save.saveservice.response_data.on_error=true
+EOF
+
+# user.properties 파일을 Pod에 복사
+kubectl cp user.properties ${MASTER_POD}:${jmeter_path}/user.properties
+rm -f user.properties
+
+# HEAP 설정 변경
 eval "kubectl cp ${MASTER_POD}:${jmeter_path}/jmeter jmeter"
 sed "s@HEAP=\"-Xms512m -Xmx512m\"@HEAP=\"-Xms512m -Xmx${MAX_JVM_MEM}\"@g" ./jmeter > ./tmp && mv ./tmp ./jmeter
 chmod +x ./jmeter
 eval "kubectl cp ./jmeter ${MASTER_POD}:${jmeter_path}/jmeter"
 rm -f ./jmeter
-# ======================
-
 
 # === RUN stress test ===
 echo "***** Start stress test for [${TESTCASE_ID}] *****"
-
 WDIR=`kubectl exec -it ${MASTER_POD} -- /bin/pwd | tr -d '\r'`
-mkdir -p results
- 
+
 NAME=$(basename ${JMX_FILE})
 NAME="${NAME%.*}"
 
+# 필요한 디렉토리 생성
 eval "kubectl exec ${MASTER_POD} -- mkdir -p $WDIR/scripts"
 eval "kubectl cp ${JMX_FILE} ${MASTER_POD}:$WDIR/scripts"
 eval "kubectl exec -it ${MASTER_POD} -- mkdir -p ${NAME}"
-eval "kubectl exec -it ${MASTER_POD} -- jmeter -n -t ./scripts/${NAME}.jmx -e -l ${NAME}/${OUTPUT_FILE} -j ${NAME}/${LOG_FILE} -R ${SLAVE_IP}"
-if [ $? -eq 0 ]; then
-  eval "kubectl cp ${MASTER_POD}:$WDIR/$NAME/${OUTPUT_FILE} results/${OUTPUT_FILE}"
-  eval "kubectl cp ${MASTER_POD}:$WDIR/$NAME/${LOG_FILE} results/${LOG_FILE}"
-  eval "kubectl exec -it ${MASTER_POD} -- rm -rf ${NAME}"
-  eval "kubectl exec -it ${MASTER_POD} -- rm -rf /jmeter/apache-jmeter-3.3/bin/report-output"
 
-  echo "***** Finish successfully !!! *****"
-else 
-  echo "***** Fail to test *****"
+# 모니터링 시작
+start_monitoring
+
+# JMeter 테스트 실행
+set +e  # 오류가 발생해도 계속 실행
+eval "kubectl exec -it ${MASTER_POD} -- jmeter -n \
+    -Jjmeter.save.saveservice.print.success.message=true \
+    -t ./scripts/${NAME}.jmx \
+    -e -l ${NAME}/${OUTPUT_FILE} \
+    -j ${NAME}/${LOG_FILE} \
+    -R ${SLAVE_IP}"
+TEST_EXIT_CODE=$?
+set -e
+
+# 결과 파일 복사
+if kubectl exec ${MASTER_POD} -- test -f "$WDIR/$NAME/${OUTPUT_FILE}" 2>/dev/null; then
+    eval "kubectl cp ${MASTER_POD}:$WDIR/$NAME/${OUTPUT_FILE} results/${OUTPUT_FILE}"
 fi
+
+if kubectl exec ${MASTER_POD} -- test -f "$WDIR/$NAME/${LOG_FILE}" 2>/dev/null; then
+    eval "kubectl cp ${MASTER_POD}:$WDIR/$NAME/${LOG_FILE} results/${LOG_FILE}"
+fi
+
+# 결과 상태 확인
+if [ ${TEST_EXIT_CODE} -eq 0 ]; then
+    echo "***** Test completed successfully! *****"
+else
+    echo "***** Test completed with errors. Exit code: ${TEST_EXIT_CODE} *****"
+fi
+
+# Pod 로그 저장
+kubectl logs ${MASTER_POD} > results/master-pod.log 2>/dev/null || true
+for slave_pod in $(kubectl get pods -l app=jmeter-server -o name); do
+    pod_name=$(echo ${slave_pod} | cut -d'/' -f2)
+    kubectl logs ${slave_pod} > results/${pod_name}.log 2>/dev/null || true
+done
+
+# 모니터링 중지
+stop_monitoring
+
+echo "***** All results have been saved to the results directory *****"
